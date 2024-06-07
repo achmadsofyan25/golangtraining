@@ -1,7 +1,7 @@
 package router
 
 import (
-	"traininggolang/handler"
+	"traininggolang/Pertemuan1/handler"
 
 	"github.com/gin-gonic/gin"
 )

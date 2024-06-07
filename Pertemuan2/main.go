@@ -1,22 +1,21 @@
 package main
 
 import (
-	"traininggolang/author"
-	"traininggolang/router"
+	"traininggolang/Pertemuan2/router"
 
 	"github.com/gin-gonic/gin"
+
+	"log"
 )
 
 func main() {
-	// Inisialisasi router Gin
 	gin.SetMode(gin.ReleaseMode)
-
 	r := gin.Default()
 
-	r.Use(author.AuthMiddleware())
-
+	// Routes
 	router.SetupRouter(r)
 
-	// Jalankan server pada port 8080
+	// Run the server
+	log.Println("Running server on port 8080")
 	r.Run(":8080")
 }
